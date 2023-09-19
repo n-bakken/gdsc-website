@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./Homepage.css";
+import "./Footer.jsx"; 
 
 function Navbar() {
   const navRef = useRef();
@@ -62,6 +63,8 @@ function Home() {
     </div>
   );
 }
+
+
 
 function HomePage() {
   return (
