@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Footer.css";
+import "./css/Footer.css";
 import 'font-awesome/css/font-awesome.min.css';
 
 

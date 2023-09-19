@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import "./Homepage.css";
+import "./css/Home.css";
 import "./Footer.jsx"; 
 
 function Navbar() {

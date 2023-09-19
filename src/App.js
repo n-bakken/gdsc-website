@@ -1,10 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import About from './components/About';
-import ContactUs from './components/ContactUs';
-import Homepage from './components/Homepage';
-import Footer from './components/Footer';
-import Homepage1 from './components/Homepage_good';
+import About from './components/pages/About';
+import ContactUs from './components/pages/ContactUs';
+import Homepage from './components/pages/Homepage';
 import "./App.css";
 
 const App = () => {
@@ -12,8 +10,8 @@ const App = () => {
     
     <Router>
       <Routes>
-      <Route path="/" element={<Homepage1 />} />
-        <Route path="/Home" element={<Homepage1 />} />
+      <Route path="/" element={<Homepage />} />
+        <Route path="/Home" element={<Homepage />} />
         <Route path="/About" element={<About />} />
         <Route path="/ContactUs" element={<ContactUs />} />
       </Routes>
