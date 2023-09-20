@@ -19,7 +19,7 @@ function Navbar() {
         <a href="/#">GBoard</a>
         <a href="/#">Meeting</a>
         <a href="/ContactUs">Contact</a>
-        <a href="/#">Login</a>
+        <a href="/Login">Login</a>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />
         </button>
