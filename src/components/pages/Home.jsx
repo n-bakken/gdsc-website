@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import "./Homepage.css";
+import "./css/Home.css";
+import "./Footer.jsx"; 
 
 function Navbar() {
   const navRef = useRef();
@@ -18,7 +19,7 @@ function Navbar() {
         <a href="/#">GBoard</a>
         <a href="/#">Meeting</a>
         <a href="/ContactUs">Contact</a>
-        <a href="/#">Login</a>
+        <a href="/Login">Login</a>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />
         </button>
@@ -62,6 +63,8 @@ function Home() {
     </div>
   );
 }
+
+
 
 function HomePage() {
   return (
