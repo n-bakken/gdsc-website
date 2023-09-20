@@ -3,24 +3,30 @@ import "./css/Footer.css";
 import 'font-awesome/css/font-awesome.min.css';
 
 
+
+
 function Footer() {
   return (
     <footer>
       <div className="footer">
         <div className="row">
         <a href="https://www.apple.com" target="_blank" rel="noopener noreferrer">
-          <i className="fa fa-twitter"></i>
+          <i className="fa fa-instagram"></i>
         </a>
-          <a href="./www.apple.com"><i className="fa fa-instagram"></i></a>
-          <a href="./www.apple.com"><i className="fa fa-youtube"></i></a>
+        <a href="https://www.youtube.com/@gdscuop2183" target="_blank" rel="noopener noreferrer">
+          <i className="fa fa-youtube"></i>
+        </a>
+        <a href="https://linktr.ee/gdsc.uop" target="_blank" rel="noopener noreferrer">
+          <i className="fa fa-google"></i>
+        </a>
           
         </div>
 
         <div className="row">
           <ul>
-            <li><a href="www.apple.com">Contact us</a></li>
-            <li><a href="www.apple.com">Terms & Conditions</a></li>
-            <li><a href="www.apple.com">SignUp</a></li>
+            <li><a href="/ContactUs ">Contact us</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="/Login">SignUp</a></li>
           </ul>
         </div>
 
