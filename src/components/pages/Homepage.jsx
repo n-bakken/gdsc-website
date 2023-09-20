@@ -1,7 +1,7 @@
 import React from 'react'
 import Home from './Home'; // Correct path to Homepage.jsx
 import Footer from './Footer';     // Correct path to Footer.jsx
-const homepage1 = () => {
+const homepage = () => {
   return (
     <div>
       <Home />
@@ -10,4 +10,4 @@ const homepage1 = () => {
   )
 }
 
-export default homepage1;
+export default homepage;
