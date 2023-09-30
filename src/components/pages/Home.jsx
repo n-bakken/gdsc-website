@@ -31,6 +31,8 @@ function Navbar() {
   );
 }
 
+
+
 function Home() {
   const state = {
     title: "Hi,",
