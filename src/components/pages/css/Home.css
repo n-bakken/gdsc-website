@@ -114,8 +114,7 @@ nav {
   font-size: 50px;
   color: #4285F4;
 }
-
-.home-image{
+/*.home-image{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -127,6 +126,7 @@ nav {
   height: 20vh;
 
 }
+ */
 
 .title{
   animation-name: moveRight;
