@@ -33,6 +33,7 @@ const Login = () => {
     <>
       <nav style={{ padding: "2rem" }}>
         <Link to="/">Go Back</Link>
+        <Link to="/Register">Register!</Link>
       </nav>
       <header style={{ textAlign: "center" }}>
         <h1>Login to continue</h1>

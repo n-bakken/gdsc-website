@@ -4,7 +4,7 @@ import useFetch from "../../hooks/useFetch";
 
 // https://developers.google.com/identity/gsi/web/reference/js-reference
 
-const SignUp = () => {
+const Register = () => {
   const { handleGoogle, loading, error } = useFetch(
     "http://localhost:5152/signup"
   );
@@ -33,6 +33,7 @@ const SignUp = () => {
     <>
       <nav style={{ padding: "2rem" }}>
         <Link to="/">Go Back</Link>
+        <Link to="/Login">Log in!</Link>
       </nav>
       <header style={{ textAlign: "center" }}>
         <h1>Register to continue</h1>
@@ -57,4 +58,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default Register;

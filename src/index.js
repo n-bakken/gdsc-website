@@ -24,7 +24,7 @@ import App from './App';
 
 export { default as Landing } from "./components/pages/Landing";
 export { default as Login } from "./components/pages/Login";
-export { default as Signup } from "./components/pages/Signup";
+export { default as Register } from "./components/pages/Register";
 
 ReactDOM.render(
 	<React.StrictMode>
