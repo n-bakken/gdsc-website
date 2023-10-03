@@ -19,7 +19,7 @@ function Model() {
     document.getElementById("three-container").appendChild(renderer.domElement);
 
     const directionalLight = new THREE.DirectionalLight(0xFFFFFF, 2);
-    directionalLight.position.set(0, 40, 60);
+    directionalLight.position.set(-80, 40, 180);
     scene.add(directionalLight);
 
     const ambientLight = new THREE.AmbientLight(0x404040, 0.5);
@@ -67,7 +67,6 @@ function Model() {
 
     render();
 
-    // Cleanup listener on unmount
     return () => {
       renderer.domElement.removeEventListener("click", rotateObject);
     };
