@@ -1,0 +1,32 @@
+newmtl Aloha_c5c42907-0ada-48d0-badf-fb209010ad50
+Kd 1.000 1.000 1.000
+d 1.000
+map_Kd Logo_Square_new.jpg
+newmtl Keyboard_b8aa194b-4f10-410d-bb17-3a0a5f762edb
+Kd 1.000 1.000 1.000
+d 1.000
+map_Kd Emission_keyboard.jpg
+newmtl Body_41d15ca2-cd6f-4023-9371-062290a167d2
+Kd 0.780 0.780 0.780
+d 1.000
+newmtl Connector_ba87c880-7705-45b9-9db6-026f63880d57
+Kd 0.000 0.000 0.000
+d 1.000
+newmtl Display Rim_e2803828-9492-4559-b23b-316ad0c8d8d6
+Kd 0.078 0.078 0.078
+d 1.000
+newmtl Rubber_29591f28-5a24-4698-b88d-ce3e69f9f407
+Kd 0.000 0.000 0.000
+d 1.000
+newmtl Connectors_012ff6b0-2e7f-4d1e-83d6-a52c8da15742
+Kd 0.000 0.000 0.000
+d 1.000
+newmtl Touchpad_88daaf7d-8e08-46eb-8696-eb59506fc7fb
+Kd 0.690 0.690 0.690
+d 1.000
+newmtl Bottom Screws_4b613f58-3b8d-4206-bbcb-1731980e557d
+Kd 0.741 0.741 0.741
+d 1.000
+newmtl Speaker_96cdf3f4-0ae5-4b17-9f47-7c6a3960ffbc
+Kd 0.000 0.000 0.000
+d 1.000

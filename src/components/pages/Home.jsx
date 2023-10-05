@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./css/Home.css";
 import "./Footer.jsx"; 
+import Model from './Laptop_model.jsx'; 
 
 function Navbar() {
   const navRef = useRef();
@@ -58,10 +59,11 @@ function Home() {
           <button className="button">Sign up!</button>
         </div>
       </div>
-
-      <div className="home-image">
-        <img className="logo-image" src={state.Image} alt="google" />
+      <div className="three-container">
+        <Model />
       </div>
+    
+      
     </div>
   );
 }
