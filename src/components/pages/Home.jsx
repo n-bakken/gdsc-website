@@ -16,7 +16,7 @@ function Navbar() {
       <h1>Google Developer Club</h1>
       <nav ref={navRef}>
         <a href="/home">Home</a>
-        <a href="/about">about</a>
+        <a href="/about">About</a>
         <a href="/#">GBoard</a>
         <a href="/#">Meeting</a>
         <a href="/ContactUs">Contact</a>
@@ -31,6 +31,8 @@ function Navbar() {
     </header>
   );
 }
+
+
 
 function Home() {
   const state = {
