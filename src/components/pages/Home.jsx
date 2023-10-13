@@ -22,6 +22,7 @@ function Navbar() {
         <a href="/#">Meeting</a>
         <a href="/ContactUs">Contact</a>
         <a href="/Login">Login</a>
+        <a href="https://discord.gg/xrRTJsBukF" target="_blank" rel="noopener noreferrer" className="discord-button">Discord</a>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />
         </button>
