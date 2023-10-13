@@ -16,11 +16,10 @@ function Navbar() {
       <h1>Google Developer Club</h1>
       <img className="uoplogo" src={"images/uop.png"} width="5%" alt="gotigers" />
       <nav ref={navRef}>
-        <a href="/home">Home</a>
         <a href="/about">About</a>
-        <a href="/#">GBoard</a>
-        <a href="/#">Meeting</a>
-        <a href="/ContactUs">Contact</a>
+        <a href="/#">G Points Board</a>
+        <a href="/#">Events</a>
+        <a href="/ContactUs">Contact Us</a>
         <a href="/Login">Login</a>
         <a href="https://discord.gg/xrRTJsBukF" target="_blank" rel="noopener noreferrer" className="discord-button">Discord</a>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
