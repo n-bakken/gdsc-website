@@ -30,10 +30,30 @@ nav a {
 	margin: 0 1rem;
 	color: var(--textColor);
 	text-decoration: none;
+  animation: box-move 1s infinite alternate-reverse;
 }
 
 nav a:hover {
 	color: var(--secondaryColor);
+  animation: box-move-anim 1s infinite alternate-reverse;
+  transition: transform 300ms;
+}
+
+@keyframes box-move {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+@keyframes box-move-anim {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translateY(-5px) scale(1.2);
+  }
 }
 
 header .nav-btn {
