@@ -12,16 +12,16 @@ function Navbar() {
   };
 
   return (
-    <header>
+    <><header>
       <h1>Google Developer Club</h1>
       <img className="uoplogo" src={"images/uop.png"} width="5%" alt="gotigers" />
       <nav ref={navRef}>
-        <a href="/home">Home</a>
-        <a href="/about">About</a>
-        <a href="/#">GBoard</a>
-        <a href="/#">Meeting</a>
-        <a href="/ContactUs">Contact</a>
-        <a href="/Login">Login</a>
+        <div><a href="/about">About</a></div>
+        <div><a href="/#">G Points Board</a></div>
+        <div><a href="/#">Events</a></div>
+        <div><a href="/ContactUs">Contact Us</a></div>
+        <div><a href="/Login">Login</a></div>
+        <div><a href="https://discord.gg/xrRTJsBukF" target="_blank" rel="noopener noreferrer" className="discord-button">Discord</a></div>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />
         </button>
@@ -30,6 +30,7 @@ function Navbar() {
         <FaBars />
       </button>
     </header>
+    </>
   );
 }
 
@@ -44,7 +45,7 @@ function Home() {
   };
 
   return (
-    <div className="home">
+    <><div className="home">
       <div className="home-intro">
         <h2>
           <div className="title">{state.title}</div>
@@ -63,9 +64,15 @@ function Home() {
       <div className="three-container">
         <Model />
       </div>
-    
-      
-    </div>
+    </div><br></br><div>
+        <iframe
+          src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%2333B679&ctz=America%2/Los_Angeles&showPrint=0&showTz=1&showTabs=1&showDate=1&src=Z2RzYy51b3BAZ21haWwuY29t&color=%230B8043"
+          style={{ borderWidth: 0, width: "800px", height: "600px", margin: 0, padding: 0 }}
+          frameBorder={0}
+          scrolling="no"
+        ></iframe>
+
+      </div></>
   );
 }
 
