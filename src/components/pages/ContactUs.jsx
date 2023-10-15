@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
+import Footer from './Footer';  
 
 export const ContactUs = () => {
   const form = useRef();
@@ -36,6 +37,7 @@ export const ContactUs = () => {
       </form>
       {submitted && <p>Email sent!</p>}
       {error && <p>An error has occurred. Please try again later.</p>}
+      <Footer />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
+import Footer from './Footer';  
 
 // https://developers.google.com/identity/gsi/web/reference/js-reference
 
@@ -50,6 +51,7 @@ const Login = () => {
         {loading ? <div>Loading....</div> : <div id="loginDiv"></div>}
       </main>
       <footer></footer>
+      <Footer />
     </>
   );
 };
