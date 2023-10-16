@@ -8,14 +8,23 @@ export const Register = () => {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
     const [name, setName] = useState('');
+    const [acctStatus, setAcctStatus] = useState(null); // Initialize login status state
 
     const register = (e) => {
         e.preventDefault();
         createUserWithEmailAndPassword(auth, email, pass)
-        .then(
-            (userCredential) => {console.log(userCredential)})
-        .catch((error)=>{console.log(error);
+        .then((userCredential) => {
+            console.log(userCredential);
+            setAcctStatus("created");
+            /*writeUserData(userCredential.user.uid, name, email, pass);*/
+            })
+        .catch((error)=>{
+            console.log(error);
+            setAcctStatus("error");
         })
+        setName('');
+        setEmail('');
+        setPass('');
     }
 
     return(
@@ -30,6 +39,8 @@ export const Register = () => {
             <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
             <button type="submit">Create my account</button>
         </form>
+        {acctStatus === "created" && <p>Successfully created account!</p>}
+        {acctStatus === "error" && <p>An error has occurred. Please try again later.</p>}
         <Link to="/Login">
         <button className="link-btn">Already have an account? Log in here</button>
     </Link>

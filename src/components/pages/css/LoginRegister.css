@@ -45,3 +45,8 @@
     text-decoration: underline;
     text-shadow: -2px 5px 20px black;
   }
+
+  .errorMessage{
+    color: red;
+    text-shadow: -2px 5px 20px black;
+  }
