@@ -208,6 +208,11 @@ canvas {
   transform: scaleX(1)
 }
 
+.button a {
+  text-decoration: none;
+  color: black;
+}
+
 @keyframes moveRight {
   0% { 
       opacity: 0; 

@@ -58,7 +58,7 @@ function Home() {
         </div>
 
         <div className="contact-me">
-          <button className="button">Sign up!</button>
+          <button className="button"><a href="/Login">Sign up!</a></button>
         </div>
       </div>
       <div className="three-container">
