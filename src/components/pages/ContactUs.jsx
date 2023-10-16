@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
+import Navbar from './Navbar';
 import Footer from './Footer';  
 
 export const ContactUs = () => {
@@ -26,6 +27,7 @@ export const ContactUs = () => {
 
   return (
     <div>
+      <Navbar />
       <form ref={form} onSubmit={sendEmail}>
         <label>Your Name: </label><br />
         <input type="text" name="user_name" required /><br />

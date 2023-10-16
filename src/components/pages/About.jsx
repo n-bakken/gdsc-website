@@ -1,7 +1,7 @@
 import React from "react";
 import "./css/About.css";
 import Footer from './Footer';  
-
+import Navbar from './Navbar';
 
 
 function AboutUs() { 
@@ -108,9 +108,9 @@ function Leadership() {
 function About() {
 	return (
 		<div>
+			<Navbar />
 			<AboutUs />
 			<Leadership />
-			
 			<Footer />
 		</div>
 	);

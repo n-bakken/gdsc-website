@@ -1,5 +1,8 @@
-import React, {useState} from "react"
-import {Link} from "react-router-dom"
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import useFetch from "../../hooks/useFetch";
+import Navbar from './Navbar';
+import Footer from './Footer';  
 import "./css/LoginRegister.css";
 
 export const Login = () => {
@@ -10,7 +13,7 @@ export const Login = () => {
         e.preventDefault();
         console.log(email);
     }
-
+    
     return(
         <div className="auth-form-container">
             <h2>Log In</h2>
