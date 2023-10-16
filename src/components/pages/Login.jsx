@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
+import Navbar from './Navbar';
 import Footer from './Footer';  
 
 // https://developers.google.com/identity/gsi/web/reference/js-reference
@@ -32,6 +33,7 @@ const Login = () => {
 
   return (
     <>
+    <Navbar />
       <nav style={{ padding: "2rem" }}>
         <Link to="/">Go Back</Link>
         <Link to="/Register">Register!</Link>
