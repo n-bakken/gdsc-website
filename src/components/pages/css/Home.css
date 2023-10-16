@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
 
+body {
+  background-image: url('https://raw.githubusercontent.com/n-bakken/gdsc-website/django-setup-round2/public/images/loginregbg.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+}
+
 * {
 	padding: 0;
 	margin: 0;
@@ -152,6 +159,10 @@ canvas {
 
 }
  */
+
+.title, .titleTwo, .titleThree{
+  text-shadow: -2px 5px 20px black;
+}
 
 .title{
   animation-name: moveRight;
