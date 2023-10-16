@@ -2,10 +2,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import About from './components/pages/About';
 import ContactUs from './components/pages/ContactUs';
 import Homepage from './components/pages/Homepage';
-import Login from './components/pages/Login';
+import {Login} from './components/pages/Login';
+import {Register} from './components/pages/Register';
 import "./App.css";
-import Register from './components/pages/Register';
-import Landing from './components/pages/Landing';
 
 const App = () => {
   return (
@@ -16,9 +15,8 @@ const App = () => {
         <Route path="/Home" element={<Homepage />} />
         <Route path="/About" element={<About />} />
         <Route path="/ContactUs" element={<ContactUs />} />
-        <Route path="/Login" element={<Login  />} />
-        <Route path="/Register" element={<Register  />} />
-        <Route path="/Landing" element={<Landing  />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Register" element={<Register />} />
       </Routes>
     </Router>
   );

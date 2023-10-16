@@ -19,7 +19,6 @@
 // reportWebVitals();
 import React from 'react';
 import { createRoot } from 'react-dom'; // Changed import
-import { GoogleOAuthProvider } from '@react-oauth/google';
 import App from './App';
 
 const container = document.getElementById('root'); 
@@ -28,9 +27,7 @@ const root = createRoot(container); // Use createRoot to initialize
 // Render the App using the new API
 root.render(
     <React.StrictMode>
-      <GoogleOAuthProvider clientId="857647722831-dksl94msme5t7sacimil60a57kshrnn4.apps.googleusercontent.com">
         <App />
-      </GoogleOAuthProvider>
     </React.StrictMode>
     , document.getElementById('root')
 );

@@ -1,61 +1,35 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import Navbar from './Navbar';
 import Footer from './Footer';  
+import "./css/LoginRegister.css";
 
-// https://developers.google.com/identity/gsi/web/reference/js-reference
+export const Login = () => {
+    const [email, setEmail] = useState('');
+    const [pass, setPass] = useState('');
 
-const Login = () => {
-  const { handleGoogle, loading, error } = useFetch(
-    "http://localhost:5152/login"
-  );
-
-  useEffect(() => {
-    /* global google */
-    if (window.google) {
-      google.accounts.id.initialize({
-        client_id: process.env.REACT_APP_GOOGLE_CLIENT_ID,
-        callback: handleGoogle,
-      });
-
-      google.accounts.id.renderButton(document.getElementById("loginDiv"), {
-        // type: "standard",
-        theme: "filled_black",
-        // size: "small",
-        text: "signin_with",
-        shape: "pill",
-      });
-
-      // google.accounts.id.prompt()
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(email);
     }
-  }, [handleGoogle]);
-
-  return (
-    <>
-    <Navbar />
-      <nav style={{ padding: "2rem" }}>
-        <Link to="/">Go Back</Link>
-        <Link to="/Register">Register!</Link>
-      </nav>
-      <header style={{ textAlign: "center" }}>
-        <h1>Login to continue</h1>
-      </header>
-      <main
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        {error && <p style={{ color: "red" }}>{error}</p>}
-        {loading ? <div>Loading....</div> : <div id="loginDiv"></div>}
-      </main>
-      <footer></footer>
+    
+    return(
+        <div className="auth-form-container">
+            <Navbar />
+            <h2>Log In</h2>
+            <form className="login-form" onSubmit={handleSubmit}>
+                <label htmlFor="email">Email</label>
+                <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="p_cat@u.pacific.edu" id="email" name="email" />
+                <label htmlFor="password">Password</label>
+                <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
+                <button type="submit">Log In</button>
+            </form>
+            <Link to="/Register">
+        <button className="link-btn">Don't have an account? Register here</button>
+    </Link>
+    <footer></footer>
       <Footer />
-    </>
-  );
-};
-
-export default Login;
+    </div>
+    )
+}

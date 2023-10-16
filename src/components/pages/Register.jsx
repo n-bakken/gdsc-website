@@ -1,65 +1,37 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import Navbar from './Navbar';
 import Footer from './Footer';  
 
-// https://developers.google.com/identity/gsi/web/reference/js-reference
+import "./css/LoginRegister.css";
 
-const Register = () => {
-  const { handleGoogle, loading, error } = useFetch(
-    "http://localhost:5152/signup"
-  );
+export const Register = () => {
+    const [email, setEmail] = useState('');
+    const [pass, setPass] = useState('');
+    const [name, setName] = useState('');
 
-  useEffect(() => {
-    /* global google */
-    if (window.google) {
-      google.accounts.id.initialize({
-        client_id: process.env.REACT_APP_GOOGLE_CLIENT_ID,
-        callback: handleGoogle,
-      });
-
-      google.accounts.id.renderButton(document.getElementById("signUpDiv"), {
-        // type: "standard",
-        theme: "filled_black",
-        // size: "small",
-        text: "continue_with",
-        shape: "pill",
-      });
-
-      // google.accounts.id.prompt()
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(email);
     }
-  }, [handleGoogle]);
 
-  return (
-    <>
-    <Navbar />
-      <nav style={{ padding: "2rem" }}>
-        <Link to="/">Go Back</Link>
-        <Link to="/Login">Log in!</Link>
-      </nav>
-      <header style={{ textAlign: "center" }}>
-        <h1>Register to continue</h1>
-      </header>
-      <main
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        {error && <p style={{ color: "red" }}>{error}</p>}
-        {loading ? (
-          <div>Loading....</div>
-        ) : (
-          <div id="signUpDiv" data-text="signup_with"></div>
-        )}
-      </main>
-      <footer></footer>
-      <Footer />
-    </>
-  );
-};
-
-export default Register;
+    return(
+        <div className="auth-form-container">
+            <h2>Register</h2>
+        <form className="register-form" onSubmit={handleSubmit}>
+            <label htmlFor="name">Full Name</label>
+            <input value={name} name="name" onChange={(e) => setName(e.target.value)} id="name" placeholder="Power Cat" />
+            <label htmlFor="email">Email</label>
+            <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="p_cat@u.pacific.edu" id="email" name="email" />
+            <label htmlFor="password">Password</label>
+            <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
+            <button type="submit">Create my account</button>
+        </form>
+        <Link to="/Login">
+        <button className="link-btn">Already have an account? Log in here</button>
+    </Link>
+    </div>
+        
+    )
+}
