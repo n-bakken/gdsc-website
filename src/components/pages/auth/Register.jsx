@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../../firebase";
+import { auth, writeUserData } from "../../../firebase";
 import "./../css/LoginRegister.css";
 
 export const Register = () => {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
-    const [name, setName] = useState('');
+    const [firstname, setFirstName] = useState('');
+    const [lastname, setLastName] = useState('');
     const [acctStatus, setAcctStatus] = useState(null); // Initialize login status state
 
     const register = (e) => {
@@ -16,13 +17,14 @@ export const Register = () => {
         .then((userCredential) => {
             console.log(userCredential);
             setAcctStatus("created");
-            /*writeUserData(userCredential.user.uid, name, email, pass);*/
+            writeUserData(userCredential.user.uid, firstname, lastname, email, pass);
             })
         .catch((error)=>{
             console.log(error);
             setAcctStatus("error");
         })
-        setName('');
+        setFirstName('');
+        setLastName('');
         setEmail('');
         setPass('');
     }
@@ -30,9 +32,12 @@ export const Register = () => {
     return(
         <div className="auth-form-container">
             <h2>Register</h2>
+            <br></br>
         <form className="register-form" onSubmit={register}>
-            <label htmlFor="name">Full Name</label>
-            <input value={name} name="name" onChange={(e) => setName(e.target.value)} id="name" placeholder="Power Cat" />
+            <label htmlFor="firstname">First Name</label>
+            <input value={firstname} name="firstname" onChange={(e) => setFirstName(e.target.value)} id="firstname" placeholder="Power" />
+            <label htmlFor="lastname">Last Name</label>
+            <input value={lastname} name="lastname" onChange={(e) => setLastName(e.target.value)} id="lastname" placeholder="Cat" />
             <label htmlFor="email">Email</label>
             <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="p_cat@u.pacific.edu" id="email" name="email" />
             <label htmlFor="password">Password</label>
