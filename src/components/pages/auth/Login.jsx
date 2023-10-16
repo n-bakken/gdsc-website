@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { auth } from "../../../firebase";
 import { Link } from "react-router-dom"; 
 import "./../css/LoginRegister.css";
@@ -16,6 +16,14 @@ export const Login = () => {
         .catch((error)=>{console.log(error);
         })
     }
+
+    const userSignOut = () => {
+        signOut(auth)
+          .then(() => {
+            console.log("sign out successful");
+          })
+          .catch((error) => console.log(error));
+      };
     
     return(
         <div className="auth-form-container">
@@ -31,6 +39,8 @@ export const Login = () => {
         <button className="link-btn">Don't have an account? Register here</button>
     </Link>
     <Link className="link-btn" to="/Home">Return Home</Link>
+    <br></br>
+    <button onClick={userSignOut}>Sign Out</button>
     </div>
     )
 }
