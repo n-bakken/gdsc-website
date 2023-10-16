@@ -39,7 +39,7 @@ function Navbar() {
 function Home() {
   const state = {
     title: "Hi,",
-    titleTwo: "Google Developer",
+    titleTwo: "UOP Tiger",
     titleThree: "Welcome to our Club",
     Image: "images/Logo.png",
   };
@@ -58,7 +58,7 @@ function Home() {
         </div>
 
         <div className="contact-me">
-          <button className="button">Sign up!</button>
+          <button className="button"><a href="/Register">Sign up!</a></button>
         </div>
       </div>
       <div className="three-container">

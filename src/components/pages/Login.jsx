@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 import {Link} from "react-router-dom"
-
+import Navbar from './Navbar';
+import Footer from './Footer';  
 import "./css/LoginRegister.css";
 
 export const Login = () => {
@@ -14,6 +15,7 @@ export const Login = () => {
 
     return(
         <div className="auth-form-container">
+            <Navbar />
             <h2>Log In</h2>
             <form className="login-form" onSubmit={handleSubmit}>
                 <label htmlFor="email">Email</label>
@@ -25,6 +27,8 @@ export const Login = () => {
             <Link to="/Register">
         <button className="link-btn">Don't have an account? Register here</button>
     </Link>
+    <footer></footer>
+      <Footer />
     </div>
     )
 }
