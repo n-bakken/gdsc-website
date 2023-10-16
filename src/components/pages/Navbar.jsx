@@ -11,7 +11,7 @@ function Navbar() {
   
     return (
       <><header>
-        <h1>Google Developer Club</h1>
+        <h1>Google Developer Student Club</h1>
         <img className="uoplogo" src={"images/uop.png"} width="5%" alt="gotigers" />
         <nav ref={navRef}>
           <div><a href="/about">About</a></div>

@@ -2,8 +2,10 @@ import React, { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./css/Home.css";
 import "./Footer.jsx"; 
+import Navbar from './Navbar';
 import Model from './Laptop_model.jsx'; 
 
+/*
 function Navbar() {
   const navRef = useRef();
 
@@ -33,7 +35,7 @@ function Navbar() {
     </>
   );
 }
-
+*/
 
 
 function Home() {
@@ -81,7 +83,7 @@ function Home() {
 function HomePage() {
   return (
     <div>
-      <Navbar />
+      <Navbar /> 
       <Home />
     </div>
   );
