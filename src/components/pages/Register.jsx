@@ -31,6 +31,7 @@ export const Register = () => {
         <Link to="/Login">
         <button className="link-btn">Already have an account? Log in here</button>
     </Link>
+    <Link className="link-btn" to="/Home">Return Home</Link>
     </div>
         
     )
