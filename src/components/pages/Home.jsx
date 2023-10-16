@@ -39,7 +39,7 @@ function Navbar() {
 function Home() {
   const state = {
     title: "Hi,",
-    titleTwo: "Google Developer",
+    titleTwo: "UOP Tiger",
     titleThree: "Welcome to our Club",
     Image: "images/Logo.png",
   };
