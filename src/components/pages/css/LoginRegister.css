@@ -39,7 +39,7 @@
     color: black;
   }
   
-  .link-btn {
+  .link-btn, link {
     background: none;
     color: white;
     text-decoration: underline;
