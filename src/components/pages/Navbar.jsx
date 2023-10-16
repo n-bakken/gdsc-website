@@ -1,13 +1,21 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState} from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./css/Home.css";
+import { auth } from "../../firebase";
 
 function Navbar() {
     const navRef = useRef();
+    const [loginStatus, setLoginStatus] = useState(null);
   
     const showNavbar = () => {
       navRef.current.classList.toggle("responsive_nav");
     };
+
+    useEffect(() => {
+      if (auth.currentUser) {
+        setLoginStatus(1)
+      }
+    }, []);
   
     return (
       <><header>
@@ -18,7 +26,7 @@ function Navbar() {
           <div><a href="/#">G Points Board</a></div>
           <div><a href="/#">Events</a></div>
           <div><a href="/ContactUs">Contact Us</a></div>
-          <div><a href="/Login">Login</a></div>
+          {loginStatus ? <div><a href="/Login">Logout</a></div> : <div><a href="/Login">Login</a></div>}
           <div><a href="https://discord.gg/xrRTJsBukF" target="_blank" rel="noopener noreferrer" className="discord-button">Discord</a></div>
           <button className="nav-btn nav-close-btn" onClick={showNavbar}>
             <FaTimes />
