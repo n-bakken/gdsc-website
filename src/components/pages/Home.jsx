@@ -18,6 +18,7 @@ function Navbar() {
       <nav ref={navRef}>
         <a href="/home">Home</a>
         <a href="/about">About</a>
+        <a href="/Event">Events</a>
         <a href="/#">GBoard</a>
         <a href="/#">Meeting</a>
         <a href="/ContactUs">Contact</a>
@@ -69,15 +70,7 @@ function Home() {
   );
 }
 
+export default Home;
 
 
-function HomePage() {
-  return (
-    <div>
-      <Navbar />
-      <Home />
-    </div>
-  );
-}
 
-export default HomePage;
