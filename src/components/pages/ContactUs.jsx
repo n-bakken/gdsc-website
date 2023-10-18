@@ -1,9 +1,10 @@
 import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
-import Navbar from './Navbar';
-import Footer from './Footer';  
+import "./css/ContactUs.css";
+import Navbar from './Navbar'; // Import the Navbar component
+import Footer from './Footer'; // Import the Footer component
 
-export const ContactUs = () => {
+const ContactUs = () => {
   const form = useRef();
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
@@ -15,32 +16,47 @@ export const ContactUs = () => {
       .then((result) => {
         console.log(result.text);
         setSubmitted(true);
-        setError(false); // Clear any previous error message
-        form.current.reset(); // Clear form fields
+        setError(false);
+        form.current.reset();
       })
       .catch((error) => {
         console.log(error.text);
         setError(true);
-        setSubmitted(false); // Ensure submitted is false on error
+        setSubmitted(false);
       });
   };
 
   return (
     <div>
       <Navbar />
-      <form ref={form} onSubmit={sendEmail}>
-        <label>Your Name: </label><br />
-        <input type="text" name="user_name" required /><br />
-        <label>Email</label><br />
-        <input type="email" name="user_email" required /><br />
-        <label>Message</label><br />
-        <textarea name="message" rows="10" cols="40" required /><br />
-        <input type="submit" value="Send!" />
+      <div className="contact__content">
+      <h3 className="contact__title">Contract Us! </h3>
+
+      <form ref={form} onSubmit={sendEmail} className="contact__form">
+        <div className="contact__form-div">
+          <label className="contact__form-tag">Your Name</label>
+          <input type="text" name="user_name" className="contact__form-input" required />
+        </div>
+
+        <div className="contact__form-div">
+          <label className="contact__form-tag">Email</label>
+          <input type="email" name="user_email" className="contact__form-input" required />
+        </div>
+
+        <div className="contact__form-div">
+          <label className="contact__form-tag">Message</label>
+          <textarea name="message" className="contact__form-input" required></textarea>
+        </div>
+
+        <input type="submit" value="Send!" className="button button--flex" />
       </form>
+
       {submitted && <p>Email sent!</p>}
       {error && <p>An error has occurred. Please try again later.</p>}
+      </div>
       <Footer />
     </div>
+    
   );
 };
 

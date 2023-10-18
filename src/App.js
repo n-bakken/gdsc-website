@@ -5,6 +5,7 @@ import Homepage from './components/pages/Homepage';
 import {Login} from './components/pages/auth/Login';
 import {Register} from './components/pages/auth/Register';
 import "./App.css";
+import 'boxicons/css/boxicons.min.css';
 
 const App = () => {
   return (
