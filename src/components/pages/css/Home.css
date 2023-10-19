@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
 
+body {
+  background-image: url('https://raw.githubusercontent.com/n-bakken/gdsc-website/master/public/images/loginregbg.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+}
+
 * {
 	padding: 0;
 	margin: 0;
@@ -22,7 +29,7 @@ header {
 	padding: 0 2rem;
 	background-color: var(--mainColor);
 	color: var(--textColor);
-    
+  box-shadow: 5px 10px 10px darkgreen;
 }
 
 
@@ -30,10 +37,35 @@ nav a {
 	margin: 0 1rem;
 	color: var(--textColor);
 	text-decoration: none;
+  animation: box-move 1s infinite alternate-reverse;
 }
 
 nav a:hover {
 	color: var(--secondaryColor);
+  animation: box-move-anim 1s infinite alternate-reverse;
+  transition: transform 300ms;
+}
+
+header h1 a {
+  text-decoration: none;
+  color: var(--textColor);
+}
+
+@keyframes box-move {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+@keyframes box-move-anim {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translateY(-5px) scale(1.2);
+  }
 }
 
 header .nav-btn {
@@ -54,7 +86,6 @@ nav {
 	display: flex;
 	align-items: center;
 	margin-left: auto;
-	
 }
 
 @media only screen and (max-width: 1024px) {
@@ -134,6 +165,10 @@ canvas {
 }
  */
 
+.title, .titleTwo, .titleThree, h2{
+  text-shadow: -2px 5px 20px black;
+}
+
 .title{
   animation-name: moveRight;
   animation-duration: 1s;
@@ -187,6 +222,11 @@ canvas {
 
 .button:hover:before{
   transform: scaleX(1)
+}
+
+.button a {
+  text-decoration: none;
+  color: black;
 }
 
 @keyframes moveRight {
