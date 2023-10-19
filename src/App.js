@@ -5,8 +5,6 @@ import Homepage from './components/pages/Homepage';
 import {Login} from './components/pages/auth/Login';
 import {Register} from './components/pages/auth/Register';
 import "./App.css";
-import Register from './components/pages/Register';
-import Landing from './components/pages/Landing';
 import Event from './components/pages/EventPage';
 
 const App = () => {
