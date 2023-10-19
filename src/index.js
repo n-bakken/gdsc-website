@@ -18,8 +18,13 @@
 // // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 // reportWebVitals();
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { createRoot } from 'react-dom'; // Changed import
 import App from './App';
+
+export { default as Landing } from "./components/pages/Landing";
+export { default as Login } from "./components/pages/Login";
+export { default as Register } from "./components/pages/Register";
 
 const container = document.getElementById('root'); 
 const root = createRoot(container); // Use createRoot to initialize
