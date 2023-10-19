@@ -1,7 +1,6 @@
 import React, {useEffect, useState } from "react";
 import "./css/Home.css";
 import "./Footer.jsx"; 
-import Navbar from './Navbar';
 import Model from './Laptop_model.jsx'; 
 import { ref, get } from "firebase/database";
 import { auth, database } from "../../firebase";
@@ -72,16 +71,4 @@ function Home() {
   );
 }
 
-
-
-
-function HomePage() {
-  return (
-    <div>
-      <Navbar /> 
-      <Home />
-    </div>
-  );
-}
-
-export default HomePage;
+export default Home;

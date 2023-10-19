@@ -1,9 +1,11 @@
 import React from 'react'
-import Home from './Home'; // Correct path to Homepage.jsx
-import Footer from './Footer';     // Correct path to Footer.jsx
+import Home from './Home'; 
+import Footer from './Footer';  
+import Navbar from './Navbar';  
 const homepage = () => {
   return (
     <div>
+      <Navbar />
       <Home />
       <Footer />
     </div>
