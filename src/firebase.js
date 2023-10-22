@@ -26,13 +26,12 @@ export const auth = getAuth(app);
 export const database = getDatabase(app);
 
 // Your writeUserData function can now use the 'database' export
-export const writeUserData = (userId, firstname, lastname, email, password) => {
+export const writeUserData = (userId, firstname, lastname, email) => {
     const userRef = ref(database, `users/${userId}`);
     
     set(userRef, {
         firstname: firstname,
         lastname: lastname,
         email: email,
-        password: password
     });
 }
