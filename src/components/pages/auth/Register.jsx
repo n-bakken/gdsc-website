@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, AuthErrorCodes } from "firebase/auth";
 import { auth, writeUserData } from "../../../firebase";
 import "./../css/LoginRegister.css";
 
@@ -9,7 +9,7 @@ export const Register = () => {
     const [pass, setPass] = useState('');
     const [firstname, setFirstName] = useState('');
     const [lastname, setLastName] = useState('');
-    const [acctStatus, setAcctStatus] = useState(null); // Initialize login status state
+    const [acctStatus, setAcctStatus] = useState(null);
 
     const register = (e) => {
         e.preventDefault();
@@ -17,11 +17,19 @@ export const Register = () => {
         .then((userCredential) => {
             console.log(userCredential);
             setAcctStatus("created");
-            writeUserData(userCredential.user.uid, firstname, lastname, email, pass);
+            writeUserData(userCredential.user.uid, firstname, lastname, email);
             })
         .catch((error)=>{
             console.log(error);
-            setAcctStatus("error");
+            if (error.code === AuthErrorCodes.EMAIL_EXISTS) { 
+                setAcctStatus("email-in-use");
+            }
+            else if(pass.length < 6){
+                setAcctStatus("short");
+            }
+            else{
+                setAcctStatus("error");
+            }
         })
         setFirstName('');
         setLastName('');
@@ -45,7 +53,9 @@ export const Register = () => {
             <button type="submit">Create my account</button>
         </form>
         {acctStatus === "created" && <p>Successfully created account!</p>}
+        {acctStatus === "email-in-use" && <p>Email is already in use. Please choose another email.</p>}
         {acctStatus === "error" && <p>An error has occurred. Please try again later.</p>}
+        {acctStatus === "short" && <p>Password needs to be at least 6 characters.</p>}
         <Link to="/Login">
         <button className="link-btn">Already have an account? Log in here</button>
     </Link>
