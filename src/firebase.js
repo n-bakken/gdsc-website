@@ -33,5 +33,6 @@ export const writeUserData = (userId, firstname, lastname, email) => {
         firstname: firstname,
         lastname: lastname,
         email: email,
+        gpoints: 0
     });
 }
