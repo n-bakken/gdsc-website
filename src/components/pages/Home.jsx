@@ -9,10 +9,12 @@ function Home() {
   const [userFirstName, setUserFirstName] = useState(null);
 
   useEffect(() => {
+    console.log("auth.currentUser:", auth.currentUser); // Debug
     if (auth.currentUser) {
       const userId = auth.currentUser.uid;
       getUserFirstName(userId)
         .then((firstName) => {
+          console.log("Fetched first name:", firstName); // Debug
           if (firstName) {
             setUserFirstName(firstName);
           }
@@ -24,17 +26,24 @@ function Home() {
   }, []);
 
   const getUserFirstName = async (userId) => {
-    const dbRef = ref(database, `/users/${userId}/firstname`); // Adjust the database path
-    const snapshot = await get(dbRef);
-    if (snapshot.exists()) {
-      return snapshot.val();
+    const dbRef = ref(database, `/users/${userId}/firstname`);
+    try {
+      const snapshot = await get(dbRef);
+      if (snapshot.exists()) {
+        return snapshot.val();
+      } else {
+        console.error("Data not found for user:", userId);
+        return null;
+      }
+    } catch (error) {
+      console.error("Error fetching user's first name:", error);
+      return null;
     }
-    return null;
   };
 
   const state = {
     title: "Hi,",
-    titleTwo: "UOP Tiger",
+    titleTwo: userFirstName ? userFirstName : "UOP Tiger",
     titleThree: "Welcome to our Club",
     Image: "images/Logo.png",
   };
@@ -44,12 +53,11 @@ function Home() {
       <div className="home-intro">
         <h2>
           <div className="title">{state.title}</div>
-          {userFirstName ? userFirstName : state.titleTwo}
+          <div className="titleTwo">{state.titleTwo}</div>
           <div className="titleThree">{state.titleThree}</div>
         </h2>
 
         <div className="text">
-          {/* Add your text content here */}
         </div>
         <div className="contact-me">
           <button className="button"><a href="/Register">Sign up!</a></button>
