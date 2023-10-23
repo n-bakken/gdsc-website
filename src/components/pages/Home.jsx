@@ -74,8 +74,13 @@ function Home() {
           frameBorder={0}
           scrolling="no"
         ></iframe>
-
-      </div></>
+      </div>
+    <div>
+      <iframe title="recentslides" 
+      src="../public/meetupslides.pdf"
+      width="100%" height="500px"></iframe>
+    </div>
+    </>
   );
 }
 
