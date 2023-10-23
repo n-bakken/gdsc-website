@@ -74,8 +74,20 @@ function Home() {
           frameBorder={0}
           scrolling="no"
         ></iframe>
-
-      </div></>
+      </div>
+    <div>
+      <h2>Recent Meet-Up Slides</h2>
+      <iframe title="recentslides" 
+      src="/meetupslides.pdf"
+      width="100%" height="500px"></iframe>
+    </div>
+    <div>
+      <h2>Recent Coding Interview Practice Slides</h2>
+      <iframe title="recentpracticeslides" 
+      src="/practiceslides.pdf"
+      width="100%" height="500px"></iframe>
+    </div>
+    </>
   );
 }
 
