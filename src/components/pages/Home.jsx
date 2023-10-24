@@ -7,14 +7,15 @@ import { auth, database } from "../../firebase";
 
 function Home() {
   const [userFirstName, setUserFirstName] = useState(null);
+  const [isCoreMember, setIsCoreMember] = useState(null);
 
   useEffect(() => {
-    console.log("auth.currentUser:", auth.currentUser); // Debug
+    console.log("auth.currentUser:", auth.currentUser);
     if (auth.currentUser) {
       const userId = auth.currentUser.uid;
       getUserFirstName(userId)
         .then((firstName) => {
-          console.log("Fetched first name:", firstName); // Debug
+          console.log("Fetched first name:", firstName);
           if (firstName) {
             setUserFirstName(firstName);
           }
@@ -22,6 +23,17 @@ function Home() {
         .catch((error) => {
           console.error("Error fetching first name:", error);
         });
+
+      getIsCoreMember(userId)
+      .then((isCoreMember) => {
+        console.log("Is core member? ", isCoreMember);
+        if(isCoreMember){
+          setIsCoreMember(isCoreMember)
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching core member:", error);
+      });
     }
   }, []);
 
@@ -41,8 +53,24 @@ function Home() {
     }
   };
 
+  const getIsCoreMember = async (userId) => {
+    const dbRef = ref(database, `/coreusers/${userId}/firstname`);
+    try {
+      const snapshot = await get(dbRef);
+      if (snapshot.exists()) {
+        return snapshot.val();
+      } else {
+        console.error("Data not found for user:", userId);
+        return null;
+      }
+    } catch (error) {
+      console.error("Error fetching user's first name:", error);
+      return null;
+    }
+  }
+
   const state = {
-    title: "Hi,",
+    title: isCoreMember ? "Welcome back, " : "Hi,",
     titleTwo: userFirstName ? userFirstName : "UOP Tiger",
     titleThree: "Welcome to our Club",
     Image: "images/Logo.png",
