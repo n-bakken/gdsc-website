@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { createUserWithEmailAndPassword, getAuth, AuthErrorCodes } from "firebase/auth";
+import { createUserWithEmailAndPassword, AuthErrorCodes } from "firebase/auth";
 import { auth, writeUserData } from "../../../firebase";
 import "./../css/LoginRegister.css";
 
