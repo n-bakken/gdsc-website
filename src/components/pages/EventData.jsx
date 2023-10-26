@@ -3,23 +3,40 @@
 
 
 const eventData = [
-    {
-      id: 1,
-      title: "leetcode practice",
-      location: "UOP",
-      date: "Oct 15",
-      imageSrc: "/images/nora.jpg",
-      tag: "leetcode"
-    },
-    {
-      id: 2,
-      title: "workshop",
-      location: "ctc 114",
-      date: "Oct 16",
-      imageSrc: "/images/nora.jpg",
-      tag: "workshop"
-    },
-    // ... Add more events as needed
-  ];
+  {
+    id: 1,
+    title: "leetcode practice",
+    location: "UOP",
+    date: "Oct 15",
+    imageSrc: "/images/nora.jpg",
+    tag: "leetcode"
+  },
+  {
+    id: 2,
+    title: "workshop",
+    location: "ctc 114",
+    date: "Oct 16",
+    imageSrc: "/images/nora.jpg",
+    tag: "workshop"
+  },
+  {
+    id: 3,
+    title: "leetcode practice",
+    location: "UOP",
+    date: "Oct 15",
+    imageSrc: "/images/nora.jpg",
+    tag: "leetcode"
+  },
+  {
+    id: 4,
+    title: "meetup",
+    location: "UOP",
+    date: "Oct 15",
+    imageSrc: "/images/nora.jpg",
+    tag: "meetup"
+  },
   
-  export default eventData;
+  // ... Add more events as needed
+];
+
+export default eventData;
