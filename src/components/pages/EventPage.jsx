@@ -20,8 +20,9 @@ function FilterTags({ setSelectedFilter }) {
     { label: "Meetup", tag: "meetup" },
     { label: "Leetcode Practice", tag: "leetcode" },
     { label: "Workshop", tag: "workshop" },
-    { label: "Past Events", tag: "past" }
+    { label: "Calendar", tag: "calendar" }
   ];
+
 
   return (
     <div className="filter-container">
@@ -57,6 +58,7 @@ function MainContent() {
   const imageUrl = "/images/Events.jpg";
   return (
     <div className="main-content" style={{ backgroundImage: `url(${imageUrl})` }}>
+      <div className="content-overlay"></div> {/* Add this div */}
       <h1>Awesome Events you don't want to miss</h1>
       <p>
         Need to put some introduction and description about our activity and 
@@ -68,6 +70,16 @@ function MainContent() {
   );
 }
 
+function getGoogleCalendar() {
+  return (
+    <iframe
+      title="Google Calendar"
+      src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%2333B679&ctz=America%2/Los_Angeles&showPrint=0&showTz=1&showTabs=1&showDate=1&src=Z2RzYy51b3BAZ21haWwuY29t&color=%230B8043"
+      style={{ border: "0", width: "100%", height: "600px", frameborder: "0", scrolling: "no" }}
+    ></iframe>
+  );
+}
+
 function EventContent() {
   const [selectedFilter, setSelectedFilter] = useState("all");
   
@@ -75,25 +87,26 @@ function EventContent() {
     ? eventData.filter(event => event.tag === selectedFilter)
     : eventData;
   
-  return (
-    <div className="event-content">
-      <SearchBar />
-      <FilterTags setSelectedFilter={setSelectedFilter} />
-      <div className="events-grid">
-        {filteredEvents.map(event => (
-          <EventCard 
-            key={event.id} 
-            title={event.title} 
-            location={event.location} 
-            date={event.date} 
-            imageSrc={event.imageSrc}
-          /> 
-        ))}
+    return (
+      <div className="event-content">
+        <SearchBar />
+        <FilterTags setSelectedFilter={setSelectedFilter} />
+        <div className="events-grid">
+          {selectedFilter === "calendar"
+            ? getGoogleCalendar() // Render Google Calendar if the "Calendar" filter is selected
+            : filteredEvents.map((event) => (
+                <EventCard
+                  key={event.id}
+                  title={event.title}
+                  location={event.location}
+                  date={event.date}
+                  imageSrc={event.imageSrc}
+                />
+              ))}
+        </div>
       </div>
-    </div>
-  );
-}
-
+    );
+  }
 
 const Event = () => {
   return (
