@@ -9,6 +9,13 @@ function Home() {
   const [userFirstName, setUserFirstName] = useState(null);
   const [isCoreMember, setIsCoreMember] = useState(null);
 
+  const handleRedirect = () => {
+    const userChoice = window.confirm("Hi core member! Do you want to be redirected to the AdminPage?");
+    if (userChoice) {
+      window.location.href = '/AdminPage';
+    }
+  };
+
   useEffect(() => {
     console.log("auth.currentUser:", auth.currentUser);
     if (auth.currentUser) {
@@ -89,6 +96,8 @@ function Home() {
         </div>
         <div className="contact-me">
           <button className="button"><a href="/Register">Sign up!</a></button>
+          {isCoreMember && (
+          <button classname="button" onClick={handleRedirect}>Core members only!</button>)}
         </div>
 
       </div>

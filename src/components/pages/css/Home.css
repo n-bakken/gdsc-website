@@ -166,9 +166,6 @@ canvas {
 }
  */
 
-.title, .titleTwo, .titleThree, h2{
-  text-shadow: -2px 5px 20px black;
-}
 
 .title{
   animation-name: moveRight;
