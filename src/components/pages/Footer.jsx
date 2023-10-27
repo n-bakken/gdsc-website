@@ -23,8 +23,8 @@ function Footer() {
         <div className="row">
           <ul>
             <li><a href="/ContactUs">Contact Us</a></li>
-            <li><a href="/AdminPage">Core Login</a></li>
-            <li><a href="/Login">SignUp</a></li>
+            <li><a href="/About">About</a></li>
+            <li><a href="/Login">Log in</a></li>
           </ul>
         </div>
 
