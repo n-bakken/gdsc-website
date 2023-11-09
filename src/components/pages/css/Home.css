@@ -126,7 +126,27 @@ nav {
 	}
 }
 
+.nav-menu {
+  
+  list-style: none;
+  text-align: center;
+  justify-content: end;
+  
+}
 
+.nav-item {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+
+
+.nav-links {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
 
 
 .home{

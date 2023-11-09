@@ -1,11 +1,33 @@
 import React, { useRef, useEffect, useState} from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaCaretDown} from "react-icons/fa";
 import "./css/Home.css";
 import { auth } from "../../firebase";
+import  Dropdown from "./Dropdown"; 
+
 
 function Navbar() {
     const navRef = useRef();
     const [loginStatus, setLoginStatus] = useState(null);
+   
+    const [dropdown, setDropdown] = useState(false); 
+    const [click, setClick] = useState(false);
+   // const handleClick = () => setClick(!click);
+    
+    const onMouseEnter = () => {
+        if (window.innerWidth < 960) {
+            setDropdown(false);
+        } else {
+            setDropdown(true);
+        }
+    };
+
+    const onMouseLeave = () => {
+        if (window.innerWidth < 960) {
+            setDropdown(false);
+        } else {
+            setDropdown(false);
+        }
+    };
   
     const showNavbar = () => {
       navRef.current.classList.toggle("responsive_nav");
@@ -27,7 +49,18 @@ function Navbar() {
           <div><a href="/Event">Events</a></div>
           <div><a href="/ContactUs">Contact Us</a></div>
           {loginStatus ? <div><a href="/Login">Logout</a></div> : <div><a href="/Login">Login</a></div>}
-          <div><a href="https://discord.gg/xrRTJsBukF" target="_blank" rel="noopener noreferrer" className="discord-button">Discord</a></div>
+          
+            <ul className= {click ? "nav-menu active" : "nav-menu"}> 
+                <li className="nav-item"
+                 onMouseEnter = { onMouseEnter}
+                 onMouseLeave = { onMouseLeave}
+                >
+                    <a href="/Resources" className="nav-links" > More <FaCaretDown /> </a>
+                    {dropdown && <Dropdown />}
+                </li>
+            </ul>
+          
+         
           <button className="nav-btn nav-close-btn" onClick={showNavbar}>
             <FaTimes />
           </button>
@@ -40,4 +73,16 @@ function Navbar() {
     );
   }
 
-  export default Navbar;
+
+
+  const navBar = () => {
+    return (
+      <div>
+         <Navbar />
+       
+      </div>
+    )
+  }
+
+  export default navBar; 
+  //export default Navbar;

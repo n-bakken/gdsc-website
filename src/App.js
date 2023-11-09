@@ -8,6 +8,8 @@ import AdminPage from './components/pages/BackendPage/AdminPage';
 import "./App.css";
 import 'boxicons/css/boxicons.min.css';
 import Event from './components/pages/EventPage';
+import Resources from './components/pages/Resources';
+
 
 const App = () => {
   return (
@@ -22,6 +24,7 @@ const App = () => {
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
         <Route path="/AdminPage" element={<AdminPage />} />
+        <Route path="/Resources" element={<Resources />} />
       </Routes>
     </Router>
     </div>
