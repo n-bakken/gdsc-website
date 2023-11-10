@@ -1,7 +1,6 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { orderByChild, limitToLast, query } from 'firebase/database';
+import React, { useState, useEffect } from 'react';
 import { ref, get } from "firebase/database";
-import { auth, database } from "../../firebase";
+import { database } from "../../firebase";
 import "./css/GPoints.css";
 import Navbar from './Navbar'; // Import the Navbar component
 import Footer from './Footer'; // Import the Footer component
@@ -10,23 +9,14 @@ const GPoints = () => {
   const [leaderboardData, setLeaderboardData] = useState([]);
 
   useEffect(() => {
-    // Reference to your Firebase database
     const dbRef = ref(database, 'users');
-
-    const leaderboardQuery = query(
-      dbRef,
-      orderByChild('gpoints'), // Assuming 'gpoints' is the field for points
-      limitToLast(5) // Limit to the top 5 users
-    );
 
     const fetchLeaderboard = async () => {
       try {
-        const snapshot = await get(leaderboardQuery);
+        const snapshot = await get(dbRef);
         if (snapshot.exists()) {
           const data = snapshot.val();
-          // Convert Firebase data into an array
           const dataArray = Object.entries(data);
-          // Sort the array by points in descending order
           dataArray.sort((a, b) => b[1].gpoints - a[1].gpoints);
           setLeaderboardData(dataArray);
         }
