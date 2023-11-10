@@ -207,7 +207,7 @@ function Home() {
 
         </div>
           <div className="three-container">
-            <Model />
+            {/* <Model /> */}
           </div>
         </div>
 

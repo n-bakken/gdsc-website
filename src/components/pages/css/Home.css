@@ -89,7 +89,7 @@ nav {
 	margin-left: auto;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1440px) {
 	header .nav-btn {
 		visibility: visible;
 		opacity: 1;
@@ -122,8 +122,11 @@ nav {
 	}
 
 	nav a {
-		font-size: 1.5rem;
-	}
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+  .nav-links {
+    font-size: 1.2em; /* Adjust font size for smaller screens */
+  }
 }
 
 .nav-menu {
@@ -146,6 +149,7 @@ nav {
   color: white;
   text-decoration: none;
   padding: 0.5rem 1rem;
+  font-size: 1em;
 }
 
 
@@ -305,6 +309,13 @@ canvas {
   .title, .titleTwo, .titleThree{
     font-size: 0.6em;
   }
+
+  h1 a {
+    font-size: 1.5rem; /* Further adjust font size for smaller screens */
+  }
+  nav {
+    font-size: 0.5em; /* Further adjust font size for smaller screens */
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -318,6 +329,9 @@ canvas {
   button {
   padding: 8px 16px;
   }
+  h1 a {
+    font-size: 1rem; /* Further adjust font size for smaller screens */
+  }
 }
 
 
@@ -330,6 +344,9 @@ canvas {
   }
   button {
       padding: 6px 12px;
+  }
+  h1 a {
+    font-size: 1rem; /* Further adjust font size for smaller screens */
   }
 }
 
