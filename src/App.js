@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import About from './components/pages/About';
+import GPoints from './components/pages/GPoints';
 import ContactUs from './components/pages/ContactUs';
 import Homepage from './components/pages/Homepage';
 import {Login} from './components/pages/auth/Login';
@@ -19,6 +20,7 @@ const App = () => {
       <Route path="/" element={<Homepage />} />
         <Route path="/Home" element={<Homepage />} />
         <Route path="/About" element={<About />} />
+        <Route path="/GPoints" element={<GPoints />} />
         <Route path="/Event" element={<Event />} />
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/Login" element={<Login />} />
