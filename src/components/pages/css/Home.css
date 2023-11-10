@@ -190,16 +190,19 @@ canvas {
 .title{
   animation-name: moveRight;
   animation-duration: 1s;
+  font-size: 1em;
 }
 
 .titleTwo{
   animation-name: moveUp;
   animation-duration: 1s;
+  font-size: 1em;
 }
 
 .titleThree{
   animation-name: moveRight;
   animation-duration: 1s;
+  font-size: 1em;
   color: green;
   margin-bottom: 10px;
 }
@@ -298,6 +301,10 @@ canvas {
   .button {
   padding: 10px 20px;
   }
+
+  .title, .titleTwo, .titleThree{
+    font-size: 0.6em;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -328,7 +335,7 @@ canvas {
 
 .floating-box {
   width: 50%;
-  height: auto; /* Allow the height to adjust based on content */
+  height: auto;
   background-color: #f2f2f2;
   box-shadow: 0 4px 8px #ddd;
   border: 1px solid #ddd;
@@ -337,7 +344,6 @@ canvas {
   animation-name: moveRight;
 }
 
-/* Styling for the text within the boxes */
 .box-text {
   font-size: 18px;
   text-align: center;
