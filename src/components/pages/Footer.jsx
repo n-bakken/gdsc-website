@@ -9,7 +9,7 @@ function Footer() {
     <footer>
       <div className="footer">
         <div className="row">
-          <a href="https://www.apple.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/gdsc.uop/" target="_blank" rel="noopener noreferrer">
             <i className="fa fa-instagram"></i>
           </a>
           <a href="https://www.youtube.com/@gdscuop2183" target="_blank" rel="noopener noreferrer">

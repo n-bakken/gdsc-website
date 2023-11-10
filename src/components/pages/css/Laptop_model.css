@@ -2,14 +2,14 @@
     width: 550px;
     height: 550px;
     position: relative;
-    margin-top: 60px; /* Adjust this value based on the height of your navbar */
+    margin-top: 60px;
     left: 60%;
     top: 40%;
     transform: translate(-50%, -50%); 
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
     overflow: hidden; 
-    bottom: 150px; /* Create a gap at the bottom equivalent to the footer height */
+    bottom: 150px;
 }
 
   

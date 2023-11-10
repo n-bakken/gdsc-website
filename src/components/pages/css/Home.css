@@ -325,3 +325,21 @@ canvas {
       padding: 6px 12px;
   }
 }
+
+.floating-box {
+  width: 50%;
+  height: auto; /* Allow the height to adjust based on content */
+  background-color: #f2f2f2;
+  box-shadow: 0 4px 8px #ddd;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  animation-name: moveRight;
+}
+
+/* Styling for the text within the boxes */
+.box-text {
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
+}
