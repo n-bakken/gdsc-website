@@ -39,6 +39,7 @@ nav a {
 	color: var(--textColor);
 	text-decoration: none;
   animation: box-move 1s infinite alternate-reverse;
+  justify-content: center;
 }
 
 nav a:hover {
@@ -87,9 +88,12 @@ nav {
 	display: flex;
 	align-items: center;
 	margin-left: auto;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: nowrap;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1440px) {
 	header .nav-btn {
 		visibility: visible;
 		opacity: 1;
@@ -122,16 +126,25 @@ nav {
 	}
 
 	nav a {
-		font-size: 1.5rem;
-	}
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+    justify-content: center;
+  }
+  .nav-links {
+    font-size: 1.2em; /* Adjust font size for smaller screens */
+  }
 }
 
 .nav-menu {
   
   list-style: none;
   text-align: center;
-  justify-content: end;
+  justify-content: center;
   
+}
+
+.responsive_nav{
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-item {
@@ -146,6 +159,7 @@ nav {
   color: white;
   text-decoration: none;
   padding: 0.5rem 1rem;
+  font-size: 1em;
 }
 
 
@@ -166,40 +180,23 @@ nav {
   font-size: 50px;
   color: #4285F4;
 }
-/*.home-image{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
-  width: 50%; 
-}
-
-canvas {
-  width: 100%;
-  height: 100%;
-}
-
-.logo-image{
-  margin: 20px auto ;
-  height: 20vh;
-
-}
- */
-
 
 .title{
   animation-name: moveRight;
   animation-duration: 1s;
+  font-size: 1em;
 }
 
 .titleTwo{
   animation-name: moveUp;
   animation-duration: 1s;
+  font-size: 1em;
 }
 
 .titleThree{
   animation-name: moveRight;
   animation-duration: 1s;
+  font-size: 1em;
   color: green;
   margin-bottom: 10px;
 }
@@ -298,6 +295,17 @@ canvas {
   .button {
   padding: 10px 20px;
   }
+
+  .title, .titleTwo, .titleThree{
+    font-size: 0.6em;
+  }
+
+  h1 a {
+    font-size: 1.5rem; /* Further adjust font size for smaller screens */
+  }
+  nav a {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -310,6 +318,13 @@ canvas {
   }
   button {
   padding: 8px 16px;
+  }
+  h1 a {
+    font-size: 1rem; /* Further adjust font size for smaller screens */
+  }
+  nav a {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+    align-items: center;
   }
 }
 
@@ -324,11 +339,18 @@ canvas {
   button {
       padding: 6px 12px;
   }
+  h1 a {
+    font-size: 1rem; /* Further adjust font size for smaller screens */
+  }
+  nav a {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+    align-items: center;
+  }
 }
 
 .floating-box {
   width: 50%;
-  height: auto; /* Allow the height to adjust based on content */
+  height: auto;
   background-color: #f2f2f2;
   box-shadow: 0 4px 8px #ddd;
   border: 1px solid #ddd;
@@ -337,7 +359,6 @@ canvas {
   animation-name: moveRight;
 }
 
-/* Styling for the text within the boxes */
 .box-text {
   font-size: 18px;
   text-align: center;
