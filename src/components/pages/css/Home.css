@@ -326,6 +326,9 @@ nav {
     font-size: 1.2rem; /* Adjust font size for smaller screens */
     align-items: center;
   }
+  .navtitle{
+    font-size: 1.5em;
+  }
 }
 
 
@@ -345,6 +348,9 @@ nav {
   nav a {
     font-size: 1.2rem; /* Adjust font size for smaller screens */
     align-items: center;
+  }
+  .navtitle{
+    font-size: 1.5em;
   }
 }
 
