@@ -243,6 +243,13 @@ function Home() {
           </a>
         </div>
     </div>
+
+    <div class="floating-box" style={{float: "right"}}>
+        <div class="box-text">
+          <h2>Color scheme too bright?</h2>
+          <button><a href="/DarkMode">Switch to Dark Mode</a></button>
+        </div>
+    </div>
     
     </>
   );
