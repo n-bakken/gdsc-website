@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { createUserWithEmailAndPassword, AuthErrorCodes } from "firebase/auth";
 import { auth, writeUserData } from "../../../firebase";
-import "./../css/LoginRegister.css";
+import "../css/LoginRegister.css";
 
 export const Register = () => {
     const [email, setEmail] = useState('');
