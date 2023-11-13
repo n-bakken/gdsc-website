@@ -1,0 +1,83 @@
+/* Reset some default styles to improve consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Define some custom variables for consistent styling */
+  :root {
+    --primary-color: #007BFF;
+    --secondary-color: #333;
+    --font-family: 'Arial', sans-serif;
+    --font-size: 16px;
+    --line-height: 1.5;
+  }
+  
+  /* Apply a background color to the body */
+  body {
+    background-color: #f5f5f5;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+  }
+  
+  /* Style the navbar */
+  .navbar {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 1rem;
+  }
+  
+  table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+  
+  /* Style the section title */
+  .contact__title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .paragraph__text {
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .contact__form-div {
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }

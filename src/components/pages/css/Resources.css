@@ -1,0 +1,30 @@
+.calendar {
+   margin-left: 20%;
+   margin-right: 20%;
+    width: 70%;
+    height: 600px;
+    padding: 0;
+}
+
+.calendar h1 {
+    margin: auto;
+    margin-top: 10%;
+    width: 440px;
+}
+
+.slides h2 {
+    margin: auto;
+    margin-top: 10%;
+    width: 440px;
+}
+
+.slides {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 7%;
+}
+.slides .recentslides, .recentpracticeslides{
+    width: 100%;
+    height: 700px;
+  
+}

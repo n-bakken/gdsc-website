@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { auth } from "../../../firebase";
 import { Link } from "react-router-dom"; 
-import "../css/LoginRegister.css";
+import "./../css/LoginRegister.css";
+import Navbar from '../Navbar'; // Import the Navbar component
+import Footer from '../Footer'; // Import the Footer component
 
 export const Login = () => {
     const [email, setEmail] = useState('');
@@ -40,6 +42,8 @@ export const Login = () => {
     
     return(
         <div className="auth-form-container">
+            <Navbar></Navbar>
+            <br></br>
             <h2>Log In</h2>
             <form className="login-form" onSubmit={login}>
                 <label htmlFor="email">Email</label>
@@ -57,6 +61,8 @@ export const Login = () => {
             <Link className="link-btn" to="/Home">Return Home</Link>
             <br></br>
             <button onClick={userSignOut}>Sign Out</button>
+            <br></br>
+            <Footer></Footer>
         </div>
     )
 }

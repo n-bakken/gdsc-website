@@ -33,7 +33,7 @@ const ContactUs = () => {
     <div>
       <Navbar />
       <div className="contact__content">
-      <h3 className="contact__title">Contract Us! </h3>
+      <h3 className="contact__title">Contact Us! </h3>
 
       <form ref={form} onSubmit={sendEmail} className="contact__form">
         <div className="contact__form-div">

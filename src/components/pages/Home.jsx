@@ -8,12 +8,124 @@ import { auth, database } from "../../firebase";
 function Home() {
   const [userFirstName, setUserFirstName] = useState(null);
   const [isCoreMember, setIsCoreMember] = useState(null);
+  const [randomQuestion, setRandomQuestion] = useState("");
 
   const handleRedirect = () => {
     const userChoice = window.confirm("Hi core member! Do you want to be redirected to the AdminPage?");
     if (userChoice) {
       window.location.href = '/AdminPage';
     }
+  };
+
+  const leetcodeQuestions = [
+      "Two Sum",
+      "Add Two Numbers",
+      "Longest Substring Without Repeating Characters",
+      "Median of Two Sorted Arrays",
+      "Longest Palindromic Substring",
+      "ZigZag Conversion",
+      "Reverse Integer",
+      "String to Integer (atoi)",
+      "Palindrome Number",
+      "Regular Expression Matching",
+      "Container With Most Water",
+      "Integer to Roman",
+      "Roman to Integer",
+      "Longest Common Prefix",
+      "3Sum",
+      "3Sum Closest",
+      "Letter Combinations of a Phone Number",
+      "4Sum",
+      "Remove Nth Node From End of List",
+      "Valid Parentheses",
+      "Merge Two Sorted Lists",
+      "Generate Parentheses",
+      "Merge k Sorted Lists",
+      "Swap Nodes in Pairs",
+      "Reverse Nodes in k-Group",
+      "Remove Duplicates from Sorted Array",
+      "Remove Element",
+      "Implement strStr()",
+      "Divide Two Integers",
+      "Substring with Concatenation of All Words",
+      "Next Permutation",
+      "Longest Valid Parentheses",
+      "Search in Rotated Sorted Array",
+      "Search Insert Position",
+      "Valid Sudoku",
+      "Sudoku Solver",
+      "Count and Say",
+      "Combination Sum",
+      "Combination Sum II",
+      "First Missing Positive",
+      "Trapping Rain Water",
+      "Multiply Strings",
+      "Wildcard Matching",
+      "Jump Game",
+      "Permutations",
+      "Permutations II",
+      "Rotate Image",
+      "Group Anagrams",
+      "Pow(x, n)",
+      "Spiral Matrix",
+      "Jump Game II",
+      "Merge Intervals",
+      "Insert Interval",
+      "Length of Last Word",
+      "Spiral Matrix II",
+      "Permutation Sequence",
+      "Rotate List",
+      "Unique Paths",
+      "Minimum Path Sum",
+      "Valid Number",
+      "Plus One",
+      "Add Binary",
+      "Text Justification",
+      "Sqrt(x)",
+      "Climbing Stairs",
+      "Simplify Path",
+      "Edit Distance",
+      "Set Matrix Zeroes",
+      "Search a 2D Matrix",
+      "Unique Paths II",
+      "Minimum Window Substring",
+      "Sort Colors",
+      "Minimum Size Subarray Sum",
+      "Subsets",
+      "Word Search",
+      "Largest Rectangle in Histogram",
+      "Maximal Rectangle",
+      "Partition List",
+      "Reverse Linked List II",
+      "Palindrome Partitioning",
+      "Scramble String",
+      "Merge Sorted Array",
+      "Gray Code",
+      "Subsets II",
+      "Decode Ways",
+      "Climbing Stairs",
+      "Delete Operation for Two Strings",
+      "Unique Binary Search Trees",
+      "Maximum Subarray",
+      "House Robber",
+      "Word Ladder",
+      "Word Ladder II",
+      "Edit Distance",
+      "Minimum Window Substring",
+      "Longest Increasing Subsequence",
+      "Alien Dictionary",
+      "Number of Islands",
+      "Course Schedule",
+      "Longest Consecutive Sequence",
+      "Word Break",
+      "Word Break II",
+      "Largest Divisible Subset",
+      "Russian Doll Envelopes" 
+  ];
+
+  const setRandomLeetcodeQuestion = () => {
+    const randomIndex = Math.floor(Math.random() * leetcodeQuestions.length);
+    setRandomQuestion(leetcodeQuestions[randomIndex]);
   };
 
   useEffect(() => {
@@ -42,6 +154,7 @@ function Home() {
         console.error("Error fetching core member:", error);
       });
     }
+    setRandomLeetcodeQuestion();
   }, []);
 
   const getUserFirstName = async (userId) => {
@@ -92,6 +205,12 @@ function Home() {
           <div className="titleThree">{state.titleThree}</div>
         </h2>
 
+        </div>
+          <div className="three-container">
+            <Model />
+          </div>
+        </div>
+
         <div className="text">
         </div>
         <div className="contact-me">
@@ -100,30 +219,40 @@ function Home() {
           <button classname="button" onClick={handleRedirect}>Core members only!</button>)}
         </div>
 
-      </div>
-      <div className="three-container">
-        <Model />
-      </div>
-    </div><br></br><div>
-        <iframe title="calendar"
-          src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%2333B679&ctz=America%2/Los_Angeles&showPrint=0&showTz=1&showTabs=1&showDate=1&src=Z2RzYy51b3BAZ21haWwuY29t&color=%230B8043"
-          style={{ borderWidth: 0, width: "800px", height: "600px", margin: 0, padding: 0 }}
-          frameBorder={0}
-          scrolling="no"
-        ></iframe>
-      </div>
-    <div>
-      <h2>Recent Meet-Up Slides</h2>
-      <iframe title="recentslides" 
-      src="/meetupslides.pdf"
-      width="100%" height="500px"></iframe>
+
+    <div class="floating-box" style={{float: "left"}}>
+        <div class="box-text">
+          <h2>Our Mission</h2>
+          <p>We are a computer science club committed to creating a strong CS community on campus with both social and learning opportunities.</p>
+        </div>
     </div>
-    <div>
-      <h2>Recent Coding Interview Practice Slides</h2>
-      <iframe title="recentpracticeslides" 
-      src="/practiceslides.pdf"
-      width="100%" height="500px"></iframe>
+    
+    <div class="floating-box" style={{float: "right"}}>
+        <div class="box-text">
+          <h2>How can I get more involved?</h2>
+          <p>Join our Discord and message a core member to see how you can get more involved!</p>
+        </div>
     </div>
+
+    <div class="floating-box" style={{float: "left"}}>
+        <div class="box-text">
+          <h2>Leetcode Question</h2>
+          <p>{randomQuestion}</p>
+          <a href="https://leetcode.com/" target="_blank" rel="noopener noreferrer">
+            Take me there!
+          </a>
+        </div>
+    </div>
+
+    <div class="floating-box" style={{float: "left"}}>
+        <div class="box-text">
+          <h2>Contribute to this site!</h2>
+          <p>Want to help develop this site? See our GitHub repo <a href="https://github.com/n-bakken/gdsc-website" target="_blank" rel="noopener noreferrer">
+            here!
+          </a></p>
+        </div>
+    </div>
+    
     </>
   );
 }
