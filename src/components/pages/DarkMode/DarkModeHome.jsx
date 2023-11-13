@@ -2,9 +2,9 @@ import React, {useEffect, useState } from "react";
 import "./css/DarkModeHome.css";
 import NavBar from "./DarkModeNavbar.jsx";
 import Footer from "./DarkModeFooter.jsx";
-import Model from './Laptop_model.jsx'; 
+import Model from '../Laptop_model.jsx'; 
 import { ref, get } from "firebase/database";
-import { auth, database } from "../../firebase";
+import { auth, database } from "../../../firebase.js";
 
 function Home() {
   const [userFirstName, setUserFirstName] = useState(null);

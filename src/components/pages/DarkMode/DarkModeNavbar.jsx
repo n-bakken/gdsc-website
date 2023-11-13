@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useState } from "react";
 import { FaBars, FaTimes, FaCaretDown } from "react-icons/fa";
-import "./css/Home.css";
-import { auth } from "../../firebase";
-import Dropdown from "./Dropdown";
+import "./css/DarkModeHome.css";
+import { auth } from "../../../firebase";
+import Dropdown from "../Dropdown";
 
 function Navbar() {
   const navRef = useRef();
