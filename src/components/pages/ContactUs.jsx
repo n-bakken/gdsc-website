@@ -11,7 +11,6 @@ const ContactUs = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs.sendForm('service_d4j5y58', 'template_qiycy67', form.current, '6vfaxkF_FxVSCQHhr')
       .then((result) => {
         console.log(result.text);
@@ -23,8 +22,12 @@ const ContactUs = () => {
         console.log(error.text);
         setError(true);
         setSubmitted(false);
+
+        
       });
   };
+
+    // for update and redering on Admin Page
 
   return (
     <div>
