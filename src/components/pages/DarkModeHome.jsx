@@ -1,5 +1,7 @@
 import React, {useEffect, useState } from "react";
-import "./css/Home.css";
+import "./css/DarkModeHome.css";
+import NavBar from "./DarkModeNavbar.jsx";
+import Footer from "./DarkModeFooter.jsx";
 import Model from './Laptop_model.jsx'; 
 import { ref, get } from "firebase/database";
 import { auth, database } from "../../firebase";
@@ -196,7 +198,9 @@ function Home() {
   };
 
   return (
-    <><div className="home">
+    <>
+    <NavBar></NavBar>
+    <div className="home">
       <div className="home-intro">
         <h2>
           <div className="title">{state.title}</div>
@@ -245,10 +249,11 @@ function Home() {
 
     <div class="floating-box" style={{float: "right"}}>
         <div class="box-text">
-          <h2>Color scheme too bright?</h2>
-          <button><a href="/DarkModeHome">Switch to Dark Mode</a></button>
+          <h2>Color scheme too dark?</h2>
+          <button><a href="/">Switch to Light Mode</a></button>
         </div>
     </div>
+    <Footer></Footer>
     
     </>
   );
