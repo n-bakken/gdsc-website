@@ -13,7 +13,7 @@ function Home() {
   const handleRedirect = () => {
     const userChoice = window.confirm("Hi core member! Do you want to be redirected to the AdminPage?");
     if (userChoice) {
-      window.location.href = '/AdminPage';
+      window.location.href = '/Admin';
     }
   };
 

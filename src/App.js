@@ -32,7 +32,6 @@ const App = () => {
         <Route path="/ImageText" element={<ImageText />} />
         <Route path="/Reupload" element={<Reupload />} />
         <Route path="/Admin" element={<Admin />} />
-        <Route path="/AdminPage" element={<AdminPage />} />
         <Route path="/Resources" element={<Resources />} />
       </Routes>
     </Router>
