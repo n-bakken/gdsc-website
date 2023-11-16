@@ -247,7 +247,7 @@ function Home() {
     <div class="floating-box" style={{float: "left"}}>
         <div class="box-text">
           <h2>Contribute to this site!</h2>
-          <p>Want to help develop this site? See our GitHub repo <a href="https://github.com/n-bakken/gdsc-website" target="_blank" rel="noopener noreferrer">
+          <p>Want to help develop this site? See our GitHub repository <a href="https://github.com/n-bakken/gdsc-website" target="_blank" rel="noopener noreferrer">
             here!
           </a></p>
         </div>
