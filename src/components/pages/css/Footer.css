@@ -1,4 +1,8 @@
 /* Footer.css */
+* {
+  font-family: "Roboto Mono", sans-serif;
+}
+
 .footer {
   display: flex;
   flex-direction: column;

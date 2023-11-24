@@ -1,4 +1,7 @@
-  
+* {
+  font-family: "Roboto Mono", sans-serif;
+}
+
   .auth-form-container, .login-form, .register-form {
     display: flex;
     flex-direction: column;
