@@ -1,5 +1,9 @@
 /* EventPage.css */
 
+* {
+    font-family: "Roboto Mono", sans-serif;
+}
+
 .main-content {
     background-position: center;
     background-size: cover;
