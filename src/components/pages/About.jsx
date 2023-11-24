@@ -9,11 +9,10 @@ function AboutUs() {
 	/*const About = () => { */
 	return (
 		<div className="aboutSection">
-			<h1>About Google Developer Club</h1>
-			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+			<br></br>
+			<h1>About Google Developer Student Club (GDSC)</h1>
+			<p>
+				We are a computer science focused club at UOP dedicated to providing a social network for CS-interested students to connect and share their knowledge with others! We are sponsored by Google, but we are solely student led. We host a multitude of social and academic events including Game Nights, General Biweekly Meet-ups, Coding Interview Practices, Website Wednesday Workshops(WWW), and many more! You can find all of our relevant information in our Discord server, or by reaching out to one of the core members listed below.   
 			</p>
 			<br></br>
 		</div>
@@ -30,21 +29,6 @@ function Leadership() {
 	return (
 		<div className="leaders">
 			<h1>Leadership</h1>
-
-			<div className="row">
-			<div className="columnDean">
-				<div className= "leaderImages">
-					<img src="images/dean.jpeg" alt = "Dean Shin" ></img>
-				</div>
-				
-				<h2>Dean Shin </h2>
-				<p className="leaderPosition2"> Founder</p>
-				<p> I am a class of 2023 alumni of University of Pacific who is interested in full-stack development and competitive coding. 
-					I also have interests in puzzle games, Jazz, and VTubers! To me, GDSC UOP was community--it allowed me to meet like-minded 
-					people who had both similar and different passions. I hope that at GDSC everyone can continue to both learn, and teach one another in the future!
-				</p>
-			</div>
-			</div>
 
 		<div className="row">
 			<div className="column">
@@ -98,6 +82,21 @@ function Leadership() {
 			</div>
 
 		</div>
+
+		<div className="row">
+			<div className="columnDean">
+				<div className= "leaderImages">
+					<img src="images/dean.jpeg" alt = "Dean Shin" ></img>
+				</div>
+				
+				<h2>Dean Shin </h2>
+				<p className="leaderPosition2"> Founder</p>
+				<p> I am a class of 2023 alumni of University of Pacific who is interested in full-stack development and competitive coding. 
+					I also have interests in puzzle games, Jazz, and VTubers! To me, GDSC UOP was community--it allowed me to meet like-minded 
+					people who had both similar and different passions. I hope that at GDSC everyone can continue to both learn, and teach one another in the future!
+				</p>
+			</div>
+			</div>
 
 		</div>
 	);
