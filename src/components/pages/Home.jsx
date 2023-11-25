@@ -210,9 +210,6 @@ function Home() {
             <Model />
           </div>
         </div>
-
-        <div className="text">
-        </div>
         <div className="contact-me">
           <button className="button"><a href="/Register">Sign up!</a></button>
           {isCoreMember && (
@@ -220,21 +217,21 @@ function Home() {
         </div>
 
 
-    <div class="floating-box" style={{float: "left"}}>
+    <div class="floating-box" style={{float: "right"}}>
         <div class="box-text">
           <h2>Our Mission</h2>
           <p>We are a computer science club committed to creating a strong CS community on campus with both social and learning opportunities.</p>
         </div>
     </div>
     
-    <div class="floating-box" style={{float: "right"}}>
+    <div class="floating-box" style={{float: "left"}}>
         <div class="box-text">
           <h2>How can I get more involved?</h2>
           <p>Join our Discord and message a core member to see how you can get more involved!</p>
         </div>
     </div>
 
-    <div class="floating-box" style={{float: "left"}}>
+    <div class="floating-box" style={{float: "right"}}>
         <div class="box-text">
           <h2>Leetcode Question</h2>
           <p>{randomQuestion}</p>

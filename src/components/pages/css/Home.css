@@ -234,6 +234,12 @@ nav {
   transition: 300ms ease-out;
 }
 
+.contact-me{
+  display: flex;
+  padding-left: 10%;
+  padding-right: 2%;
+}
+
 .button:hover:before{
   transform: scaleX(1)
 }
