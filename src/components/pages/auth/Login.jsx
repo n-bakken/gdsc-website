@@ -50,7 +50,7 @@ export const Login = () => {
                 <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="p_cat@u.pacific.edu" id="email" name="email" />
                 <label htmlFor="password">Password</label>
                 <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
-                <button type="submit">Log In</button>
+                <button className="button" type="submit">Log In</button>
             </form>
             {loginStatus === "signed-in" && <p>Successfully signed in!</p>}
             {loginStatus === "error" && <p className="errorMessage">{errorMessage}</p>}
@@ -60,7 +60,7 @@ export const Login = () => {
             </Link>
             <Link className="link-btn" to="/Home">Return Home</Link>
             <br></br>
-            <button onClick={userSignOut}>Sign Out</button>
+            <button className="button" onClick={userSignOut}>Sign Out</button>
             <br></br>
             <Footer></Footer>
         </div>

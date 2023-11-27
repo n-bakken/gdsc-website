@@ -235,9 +235,9 @@ function Home() {
         <div class="box-text">
           <h2>Leetcode Question</h2>
           <p>{randomQuestion}</p>
-          <a href="https://leetcode.com/" target="_blank" rel="noopener noreferrer">
+          <button className="button"><a href="https://leetcode.com/" target="_blank" rel="noopener noreferrer">
             Take me there!
-          </a>
+          </a> </button>
         </div>
     </div>
 
