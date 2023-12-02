@@ -236,8 +236,7 @@ nav {
 
 .contact-me{
   display: flex;
-  padding-left: 10%;
-  padding-right: 2%;
+  
 }
 
 .button:hover:before{
