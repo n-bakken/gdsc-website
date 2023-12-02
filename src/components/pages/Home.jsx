@@ -204,16 +204,16 @@ function Home() {
           <div className="titleTwo">{state.titleTwo}</div>
           <div className="titleThree">{state.titleThree}</div>
         </h2>
+        <div className="contact-me">
+          <button className="button"><a href="/Register">Sign up!</a></button>
+          {isCoreMember && (
+          <button classname="button" onClick={handleRedirect}>Core members only!</button>)}
+        </div>
 
         </div>
           <div className="three-container">
             <Model />
           </div>
-        </div>
-        <div className="contact-me">
-          <button className="button"><a href="/Register">Sign up!</a></button>
-          {isCoreMember && (
-          <button classname="button" onClick={handleRedirect}>Core members only!</button>)}
         </div>
 
 
@@ -235,9 +235,9 @@ function Home() {
         <div class="box-text">
           <h2>Leetcode Question</h2>
           <p>{randomQuestion}</p>
-          <a href="https://leetcode.com/" target="_blank" rel="noopener noreferrer">
+          <button className="button"><a href="https://leetcode.com/" target="_blank" rel="noopener noreferrer">
             Take me there!
-          </a>
+          </a> </button>
         </div>
     </div>
 
