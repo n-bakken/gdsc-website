@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { createUserWithEmailAndPassword, AuthErrorCodes } from "firebase/auth";
 import { auth, writeUserData } from "../../../firebase";
-import "./../css/LoginRegister.css";
-import Navbar from '../Navbar'; // Import the Navbar component
-import Footer from '../Footer'; // Import the Footer component
+import "../css/LoginRegister.css";
 
 export const Register = () => {
     const [email, setEmail] = useState('');
@@ -41,8 +39,6 @@ export const Register = () => {
 
     return(
         <div className="auth-form-container">
-            <Navbar></Navbar>
-            <br></br>
             <h2>Register</h2>
             <br></br>
         <form className="register-form" onSubmit={register}>
@@ -64,8 +60,6 @@ export const Register = () => {
         <button className="link-btn">Already have an account? Log in here</button>
     </Link>
     <Link className="link-btn" to="/Home">Return Home</Link>
-    <br></br>
-    <Footer></Footer>
     </div>
         
     )

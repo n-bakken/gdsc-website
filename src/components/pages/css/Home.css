@@ -162,12 +162,13 @@ nav {
 }
 
 
-.home{
-  background-color: 052142;
+.home {
+  background-color: #ffffff; /* Set background color to white */
   height: 90vh;
   width: 100%;
   display: flex;
 }
+
 
 .home-intro{
   width: 50%;
