@@ -58,7 +58,7 @@ export const Login = () => {
             <br></br>
             <button className="button" onClick={userSignOut}>Sign Out</button>
             <br></br>
-            <Footer></Footer>
+            
         </div>
     )
 }
