@@ -1,19 +1,22 @@
 #three-container {
-    width: 550px;
-    height: 550px;
+    max-width: 550px; /* Maximum width */
+    width: 100%; /* Responsive width */
+    height: auto; /* Height will be set by JavaScript to maintain aspect ratio */
     position: relative;
     margin-top: 60px;
-    left: 60%;
-    top: 40%;
-    transform: translate(-50%, -50%); 
+    left: 50%; /* Center horizontally */
+    top: 50%; /* Center vertically */
+    transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
-    overflow: hidden; 
+    overflow: hidden;
     bottom: 150px;
+    border: none; /* Ensure there's no border */
+    outline: none; /* Ensure there's no outline */
+    z-index: 1; /* Set a lower z-index for the canvas */
+    position: relative; /* Ensure it is positioned */
 }
 
-  
-  
   
   
   
