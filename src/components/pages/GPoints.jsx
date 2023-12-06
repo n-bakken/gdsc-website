@@ -11,6 +11,7 @@ const GPoints = () => {
   useEffect(() => {
     const dbRef = ref(database, 'users');
 
+    //grab all users data from the database, only planning to show name and amount of gpoints
     const fetchLeaderboard = async () => {
       try {
         const snapshot = await get(dbRef);
@@ -31,6 +32,7 @@ const GPoints = () => {
 
   }, []);
 
+  //grab dynamic user info and render
   return (
     <div>
       <Navbar />

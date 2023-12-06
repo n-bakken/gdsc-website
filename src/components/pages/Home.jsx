@@ -9,14 +9,14 @@ function Home() {
   const [userFirstName, setUserFirstName] = useState(null);
   const [isCoreMember, setIsCoreMember] = useState(null);
   const [randomQuestion, setRandomQuestion] = useState("");
-
+  //redirect a core user to the admin page if they so desire
   const handleRedirect = () => {
     const userChoice = window.confirm("Hi core member! Do you want to be redirected to the AdminPage?");
     if (userChoice) {
       window.location.href = '/Admin';
     }
   };
-
+  //create an array of leetcode questions to randomly grab from on website load
   const leetcodeQuestions = [
       "Two Sum",
       "Add Two Numbers",
@@ -122,12 +122,13 @@ function Home() {
       "Largest Divisible Subset",
       "Russian Doll Envelopes" 
   ];
-
+  //website randomly chooses a question when loaded
   const setRandomLeetcodeQuestion = () => {
     const randomIndex = Math.floor(Math.random() * leetcodeQuestions.length);
     setRandomQuestion(leetcodeQuestions[randomIndex]);
   };
-
+  //fetch the first name of the user to provide a personalized message, write to console if it is not found
+  //check if user is a core member for further personalization
   useEffect(() => {
     console.log("auth.currentUser:", auth.currentUser);
     if (auth.currentUser) {
@@ -156,7 +157,7 @@ function Home() {
     }
     setRandomLeetcodeQuestion();
   }, []);
-
+  //grab user first name from database
   const getUserFirstName = async (userId) => {
     const dbRef = ref(database, `/users/${userId}/firstname`);
     try {
@@ -172,7 +173,7 @@ function Home() {
       return null;
     }
   };
-
+  //write to console if core member status could not be found
   const getIsCoreMember = async (userId) => {
     const dbRef = ref(database, `/coreusers/${userId}/firstname`);
     try {
@@ -188,7 +189,7 @@ function Home() {
       return null;
     }
   }
-
+  //personalize welcome message if logged in, provide defaults if not
   const state = {
     title: isCoreMember ? "Welcome back, " : "Hi,",
     titleTwo: userFirstName ? userFirstName : "UOP Tiger",
@@ -196,6 +197,7 @@ function Home() {
     Image: "images/Logo.png",
   };
 
+  //return all objects of home page--non changing elements are hardcoded (static)
   return (
     <><div className="home">
       <div className="home-intro">

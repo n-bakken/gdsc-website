@@ -14,7 +14,7 @@ import ImageText from './components/pages/Backend/ImageText';
 import Admin from './components/pages/Admin';
 import Resources from './components/pages/Resources';
 
-
+//return app as a collection of routes to ensure the easy movement between pages
 const App = () => {
   return (
     <div>

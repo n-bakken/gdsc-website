@@ -24,8 +24,7 @@ function AboutUs() {
 function Leadership() {
 
 
-	/*const leaderShip = () => { */
-		
+	//this static page provides info on all of the core members of the club. it is largely in html.
 	return (
 		<div className="leaders">
 			<h1>Leadership</h1>

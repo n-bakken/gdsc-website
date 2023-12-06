@@ -10,6 +10,9 @@ export const Login = () => {
     const [loginStatus, setLoginStatus] = useState(null); // Initialize login status state
     const [errorMessage, setErrorMessage] = useState('');
 
+    //this function attempts to authenticate user information with firebase
+    //if an account exists and the user inputted correct login information, then they are logged in
+    //if not, an error message is shown and the state of the pages does not change
     const login = (e) => {
         e.preventDefault();
         signInWithEmailAndPassword(auth, email, pass)
@@ -28,6 +31,7 @@ export const Login = () => {
         setPass('');
     }
 
+    //if logged in, the user has the option to sign out and return the state of the website to defaults
     const userSignOut = () => {
         signOut(auth)
           .then(() => {
@@ -37,7 +41,7 @@ export const Login = () => {
           })
           .catch((error) => console.log(error));
       };
-    
+    //this function returns an html element of the intended page given the state of the system (dynamically shows errors if applicable) 
     return(
         <div className="auth-form-container">
             <h2>Log In</h2>

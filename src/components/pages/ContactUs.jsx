@@ -9,6 +9,7 @@ const ContactUs = () => {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
 
+  //use EmailJS API to connect to server and send them the form, they will handle the sending of the email
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs.sendForm('service_d4j5y58', 'template_qiycy67', form.current, '6vfaxkF_FxVSCQHhr')
@@ -27,8 +28,8 @@ const ContactUs = () => {
       });
   };
 
-    // for update and redering on Admin Page
-
+  //below html code is for rendering the contact us form
+  //complete with feedback messages regarding email send status
   return (
     <div>
       <Navbar />

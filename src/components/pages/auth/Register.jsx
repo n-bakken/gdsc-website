@@ -10,17 +10,20 @@ export const Register = () => {
     const [firstname, setFirstName] = useState('');
     const [lastname, setLastName] = useState('');
     const [acctStatus, setAcctStatus] = useState(null);
-
+    //on attempting to make a new account, this function tries to write new user data to our database
     const register = (e) => {
         e.preventDefault();
         createUserWithEmailAndPassword(auth, email, pass)
+        //try to create the new account
         .then((userCredential) => {
             console.log(userCredential);
             setAcctStatus("created");
             writeUserData(userCredential.user.uid, firstname, lastname, email);
             })
+        //if email already exists, provide an error message explaining the situation
         .catch((error)=>{
             console.log(error);
+            //explain the error and change state, as different types of errors exist
             if (error.code === AuthErrorCodes.EMAIL_EXISTS) { 
                 setAcctStatus("email-in-use");
             }
@@ -37,6 +40,7 @@ export const Register = () => {
         setPass('');
     }
 
+    //this function returns an html element of the intended page given the state of the system (dynamically shows errors if applicable) 
     return(
         <div className="auth-form-container">
             <h2>Register</h2>
