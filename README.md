@@ -117,3 +117,11 @@ This file, which is required for all REACT apps, is the first `.jsx` code that w
 ### firebase.js
 
 This file facilitates the easy communication between our app and our firebase user authentication and database.
+
+## Conclusion
+
+The Google Developer Student Club (GDSC) Website project, contributed by Nora Bakken, Sianna Mucino, and Howard Lee, is a remarkable testament to modern web development techniques and strategic technology integration. We adept use of React for front-end development, Amazon Web Services (AWS) for hosting, and Firebase for back-end solutions reflects a thoughtful selection of tools that are not only relevant in today’s tech industry but also highly effective for the project's requirements.
+
+In our thought, this project is more than just a showcase of technical skills; it's a narrative of problem-solving, innovation, and the effective application of technology. our team’s journey through this project, marked by overcoming significant challenges and our astute use of modern tech, is not just commendable but also inspiring. It’s a vivid reminder of the power of teamwork, technical expertise, and strategic planning in the ever-evolving domain of web development. The GDSC website, in my view, is not just a project but a beacon for future developers, highlighting the essence of skill, creativity, and adaptability in technology.
+
+A significant diffculity of this project is its sophisticated handling of a challenging aspect - rendering a 3D laptop model on AWS. We are still figure out how we gonna successful achieve this goal by learning different technical documentation. 
