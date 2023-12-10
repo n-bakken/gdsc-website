@@ -2,6 +2,7 @@ import React, { useState} from "react";
 import { MenuItems } from "./MenuItems"
 import "./css/Dropdown.css"
 
+//  logic for when the drop down menu is clicked by the user in the nav bar
 function Dropdown() {
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)

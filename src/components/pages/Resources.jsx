@@ -3,6 +3,7 @@ import Footer from './Footer';
 import Navbar from './Navbar';
 import "./css/Resources.css"
 
+// displays GDSC's events calendar, recent meet up slides and recent coding slides on the resources pages 
 function Resources() {
     return(
         <>
